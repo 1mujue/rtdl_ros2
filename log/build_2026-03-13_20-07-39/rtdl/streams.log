@@ -1,0 +1,28 @@
+[0.010s] Invoking command in '/home/mujue/pros/rtdl/build/rtdl': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mujue/pros/rtdl/build/rtdl -- -j4 -l4
+[0.086s] [35m[1mConsolidate compiler generated dependencies of target my_bt_node[0m
+[0.118s] [ 50%] [32mBuilding CXX object CMakeFiles/my_bt_node.dir/src/test.cpp.o[0m
+[4.650s] [100%] [32m[1mLinking CXX executable my_bt_node[0m
+[4.922s] [100%] Built target my_bt_node
+[4.943s] Invoked command in '/home/mujue/pros/rtdl/build/rtdl' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mujue/pros/rtdl/build/rtdl -- -j4 -l4
+[4.952s] Invoking command in '/home/mujue/pros/rtdl/build/rtdl': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mujue/pros/rtdl/build/rtdl
+[4.960s] -- Install configuration: ""
+[4.964s] -- Installing: /home/mujue/pros/rtdl/install/rtdl/lib/rtdl/my_bt_node
+[4.965s] -- Set runtime path of "/home/mujue/pros/rtdl/install/rtdl/lib/rtdl/my_bt_node" to ""
+[4.965s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/trees
+[4.965s] -- Installing: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/trees/tree.xml
+[4.966s] -- Installing: /home/mujue/pros/rtdl/install/rtdl/share/ament_index/resource_index/package_run_dependencies/rtdl
+[4.967s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/ament_index/resource_index/parent_prefix_path/rtdl
+[4.967s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/environment/ament_prefix_path.sh
+[4.967s] -- Installing: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/environment/ament_prefix_path.dsv
+[4.967s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/environment/path.sh
+[4.967s] -- Installing: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/environment/path.dsv
+[4.967s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/local_setup.bash
+[4.968s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/local_setup.sh
+[4.968s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/local_setup.zsh
+[4.968s] -- Installing: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/local_setup.dsv
+[4.968s] -- Installing: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/package.dsv
+[4.968s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/ament_index/resource_index/packages/rtdl
+[4.968s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/cmake/rtdlConfig.cmake
+[4.968s] -- Up-to-date: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/cmake/rtdlConfig-version.cmake
+[4.969s] -- Installing: /home/mujue/pros/rtdl/install/rtdl/share/rtdl/package.xml
+[4.971s] Invoked command in '/home/mujue/pros/rtdl/build/rtdl' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mujue/pros/rtdl/build/rtdl

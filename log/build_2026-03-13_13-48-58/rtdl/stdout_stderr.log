@@ -1,0 +1,59 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found behaviortree_cpp: 4.9.0 (/opt/ros/humble/share/behaviortree_cpp/cmake)
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mujue/pros/rtdl/build/rtdl
+[ 50%] [32mBuilding CXX object CMakeFiles/my_bt_node.dir/src/test.cpp.o[0m
+[100%] [32m[1mLinking CXX executable my_bt_node[0m
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `main':
+test.cpp:(.text+0x1ae): undefined reference to `BT::BehaviorTreeFactory::createTreeFromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::shared_ptr<BT::Blackboard>)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `Init::Init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, BT::NodeConfiguration const&)':
+test.cpp:(.text._ZN4InitC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN2BT17NodeConfigurationE[_ZN4InitC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN2BT17NodeConfigurationE]+0x2b): undefined reference to `BT::SyncActionNode::SyncActionNode(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, BT::NodeConfiguration const&)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `CheckExpr::CheckExpr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, BT::NodeConfiguration const&)':
+test.cpp:(.text._ZN9CheckExprC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN2BT17NodeConfigurationE[_ZN9CheckExprC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN2BT17NodeConfigurationE]+0x2b): undefined reference to `BT::ConditionNode::ConditionNode(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, BT::NodeConfiguration const&)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `nonstd::expected_lite::expected<void, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > BT::TreeNode::setOutput<bool>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool const&)':
+test.cpp:(.text._ZN2BT8TreeNode9setOutputIbEEN6nonstd13expected_lite8expectedIvNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERKSA_RKT_[_ZN2BT8TreeNode9setOutputIbEEN6nonstd13expected_lite8expectedIvNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERKSA_RKT_]+0x215): undefined reference to `BT::TreeNode::isBlackboardPointer(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)'
+/usr/bin/ld: test.cpp:(.text._ZN2BT8TreeNode9setOutputIbEEN6nonstd13expected_lite8expectedIvNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERKSA_RKT_[_ZN2BT8TreeNode9setOutputIbEEN6nonstd13expected_lite8expectedIvNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEERKSA_RKT_]+0x22c): undefined reference to `BT::TreeNode::stripBlackboardPointer(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `nonstd::expected_lite::expected<void, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > BT::TreeNode::getInput<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) const':
+test.cpp:(.text._ZNK2BT8TreeNode8getInputINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEN6nonstd13expected_lite8expectedIvS7_EERKS7_RT_[_ZNK2BT8TreeNode8getInputINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEN6nonstd13expected_lite8expectedIvS7_EERKS7_RT_]+0x1b8): undefined reference to `BT::TreeNode::getRemappedKey[abi:cxx11](nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >, nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)'
+/usr/bin/ld: test.cpp:(.text._ZNK2BT8TreeNode8getInputINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEN6nonstd13expected_lite8expectedIvS7_EERKS7_RT_[_ZNK2BT8TreeNode8getInputINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEN6nonstd13expected_lite8expectedIvS7_EERKS7_RT_]+0x20d): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > BT::convertFromString<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `void BT::BehaviorTreeFactory::registerNodeType<Init>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+test.cpp:(.text._ZN2BT19BehaviorTreeFactory16registerNodeTypeI4InitEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN2BT19BehaviorTreeFactory16registerNodeTypeI4InitEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0xa6): undefined reference to `BT::BehaviorTreeFactory::registerBuilder(BT::TreeNodeManifest const&, std::function<std::unique_ptr<BT::TreeNode, std::default_delete<BT::TreeNode> > (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, BT::NodeConfiguration const&)> const&)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `void BT::BehaviorTreeFactory::registerNodeType<CheckExpr>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+test.cpp:(.text._ZN2BT19BehaviorTreeFactory16registerNodeTypeI9CheckExprEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN2BT19BehaviorTreeFactory16registerNodeTypeI9CheckExprEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0xa6): undefined reference to `BT::BehaviorTreeFactory::registerBuilder(BT::TreeNodeManifest const&, std::function<std::unique_ptr<BT::TreeNode, std::default_delete<BT::TreeNode> > (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, BT::NodeConfiguration const&)> const&)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, BT::PortInfo> BT::CreatePort<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(BT::PortDirection, nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >, nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)':
+test.cpp:(.text._ZN2BT10CreatePortINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt4pairIS6_NS_8PortInfoEENS_13PortDirectionEN6nonstd7sv_lite17basic_string_viewIcS4_EESE_[_ZN2BT10CreatePortINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt4pairIS6_NS_8PortInfoEENS_13PortDirectionEN6nonstd7sv_lite17basic_string_viewIcS4_EESE_]+0x1b7): undefined reference to `BT::PortInfo::setDescription(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, BT::PortInfo> BT::CreatePort<bool>(BT::PortDirection, nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >, nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)':
+test.cpp:(.text._ZN2BT10CreatePortIbEESt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8PortInfoEENS_13PortDirectionEN6nonstd7sv_lite17basic_string_viewIcS5_EESE_[_ZN2BT10CreatePortIbEESt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8PortInfoEENS_13PortDirectionEN6nonstd7sv_lite17basic_string_viewIcS5_EESE_]+0x1b7): undefined reference to `BT::PortInfo::setDescription(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `void BT::Blackboard::set<bool>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool const&)':
+test.cpp:(.text._ZN2BT10Blackboard3setIbEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_[_ZN2BT10Blackboard3setIbEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_]+0x141): undefined reference to `BT::PortInfo::type() const'
+/usr/bin/ld: test.cpp:(.text._ZN2BT10Blackboard3setIbEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_[_ZN2BT10Blackboard3setIbEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKT_]+0x1ef): undefined reference to `BT::Blackboard::createEntryImpl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, BT::PortInfo const&)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `BT::GetAnyFromStringFunctor<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >()::{lambda(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)#1}::operator()(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >) const':
+test.cpp:(.text._ZZN2BT23GetAnyFromStringFunctorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt8functionIFNS_3AnyEN6nonstd7sv_lite17basic_string_viewIcS4_EEEEvENKUlSC_E_clESC_[_ZZN2BT23GetAnyFromStringFunctorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt8functionIFNS_3AnyEN6nonstd7sv_lite17basic_string_viewIcS4_EEEEvENKUlSC_E_clESC_]+0x3f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > BT::convertFromString<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)'
+/usr/bin/ld: CMakeFiles/my_bt_node.dir/src/test.cpp.o: in function `BT::GetAnyFromStringFunctor<bool>()::{lambda(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)#1}::operator()(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >) const':
+test.cpp:(.text._ZZN2BT23GetAnyFromStringFunctorIbEESt8functionIFNS_3AnyEN6nonstd7sv_lite17basic_string_viewIcSt11char_traitsIcEEEEEvENKUlS8_E_clES8_[_ZZN2BT23GetAnyFromStringFunctorIbEESt8functionIFNS_3AnyEN6nonstd7sv_lite17basic_string_viewIcSt11char_traitsIcEEEEEvENKUlS8_E_clES8_]+0x3a): undefined reference to `bool BT::convertFromString<bool>(nonstd::sv_lite::basic_string_view<char, std::char_traits<char> >)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/my_bt_node.dir/build.make:99: my_bt_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/my_bt_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

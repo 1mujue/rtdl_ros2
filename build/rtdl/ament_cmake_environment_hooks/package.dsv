@@ -1,0 +1,4 @@
+source;share/rtdl/local_setup.bash
+source;share/rtdl/local_setup.dsv
+source;share/rtdl/local_setup.sh
+source;share/rtdl/local_setup.zsh

@@ -1,0 +1,8 @@
+source;share/rtdl/hook/cmake_prefix_path.ps1
+source;share/rtdl/hook/cmake_prefix_path.dsv
+source;share/rtdl/hook/cmake_prefix_path.sh
+source;share/rtdl/local_setup.bash
+source;share/rtdl/local_setup.dsv
+source;share/rtdl/local_setup.ps1
+source;share/rtdl/local_setup.sh
+source;share/rtdl/local_setup.zsh

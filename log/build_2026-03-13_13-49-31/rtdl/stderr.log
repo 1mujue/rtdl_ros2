@@ -1,0 +1,8 @@
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:16:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass BT::Tree[m[K’ has no member named ‘[01m[KtickRootWhileRunning[m[K’; did you mean ‘[01m[KtickWhileRunning[m[K’?
+   16 |         tree.[01;31m[KtickRootWhileRunning[m[K();
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |              [32m[KtickWhileRunning[m[K
+gmake[2]: *** [CMakeFiles/my_bt_node.dir/build.make:76: CMakeFiles/my_bt_node.dir/src/test.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/my_bt_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

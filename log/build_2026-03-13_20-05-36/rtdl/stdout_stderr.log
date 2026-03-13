@@ -1,0 +1,50 @@
+[35m[1mConsolidate compiler generated dependencies of target my_bt_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/my_bt_node.dir/src/test.cpp.o[0m
+In file included from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1[m[K:
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:40:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd[m[K’ does not name a type
+   40 |     LogMessage(const [01;31m[Kstd[m[K:;string& name,
+      |                      [01;31m[K^~~[m[K
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:40:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K:[m[K’ token
+   40 |     LogMessage(const std[01;31m[K:[m[K;string& name,
+      |                         [01;31m[K^[m[K
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:40:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+   40 |     LogMessage[34m[K([m[Kconst std:[01;31m[K;[m[Kstring& name,
+      |               [34m[K~[m[K          [01;31m[K^[m[K
+      |                          [32m[K)[m[K
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:40:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+   40 |     LogMessage(const std:;[01;31m[Kstring[m[K& name,
+      |                           [01;31m[K^~~~~~[m[K
+      |                           [32m[Kstdin[m[K
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:44:16:[m[K [01;31m[Kerror: [m[K‘[01m[KPortList[m[K’ in namespace ‘[01m[KBT[m[K’ does not name a type; did you mean ‘[01m[KPortsList[m[K’?
+   44 |     static BT::[01;31m[KPortList[m[K providedPorts(){
+      |                [01;31m[K^~~~~~~~[m[K
+      |                [32m[KPortsList[m[K
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:17:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kfactory[m[K’
+   17 |     [01;31m[Kfactory[m[K.registerBuilder<LogMessage>("LogMessage", log_builder);
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:27:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree[m[K’ was not declared in this scope; did you mean ‘[01m[Kfree[m[K’?
+   27 |         BT::StdCoutLogger logger([01;31m[Ktree[m[K);
+      |                                  [01;31m[K^~~~[m[K
+      |                                  [32m[Kfree[m[K
+In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:259[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17[m[K,
+                 from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1[m[K,
+                 from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1[m[K:
+/usr/include/c++/11/bits/unique_ptr.h: In instantiation of ‘[01m[Ktypename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = LogMessage; _Args = {const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, const BT::NodeConfig&, const std::shared_ptr<rclcpp::Node>&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<LogMessage, std::default_delete<LogMessage> >][m[K’:
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:14:44:[m[K   required from here
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:962:30:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KLogMessage::LogMessage(const std::__cxx11::basic_string<char>&, const BT::NodeConfig&, const std::shared_ptr<rclcpp::Node>&)[m[K’
+  962 |     { return unique_ptr<_Tp>([01;31m[Knew _Tp(std::forward<_Args>(__args)...)[m[K); }
+      |                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1[m[K:
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:40:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KLogMessage::LogMessage(int)[m[K’
+   40 |     [01;36m[KLogMessage[m[K(const std:;string& name,
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:40:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+gmake[2]: *** [CMakeFiles/my_bt_node.dir/build.make:76: CMakeFiles/my_bt_node.dir/src/test.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/my_bt_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

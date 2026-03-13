@@ -1,0 +1,15 @@
+[0.011s] Invoking command in '/home/mujue/pros/rtdl/build/rtdl': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mujue/pros/rtdl/build/rtdl -- -j4 -l4
+[0.081s] [35m[1mConsolidate compiler generated dependencies of target my_bt_node[0m
+[0.120s] [ 50%] [32mBuilding CXX object CMakeFiles/my_bt_node.dir/src/test.cpp.o[0m
+[3.019s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.019s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:17:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kfactory[m[K’
+[3.019s]    17 |     [01;31m[Kfactory[m[K.registerBuilder<LogMessage>("LogMessage", log_builder);
+[3.019s]       |     [01;31m[K^~~~~~~[m[K
+[3.023s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:27:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree[m[K’ was not declared in this scope; did you mean ‘[01m[Kfree[m[K’?
+[3.023s]    27 |         BT::StdCoutLogger logger([01;31m[Ktree[m[K);
+[3.023s]       |                                  [01;31m[K^~~~[m[K
+[3.023s]       |                                  [32m[Kfree[m[K
+[4.426s] gmake[2]: *** [CMakeFiles/my_bt_node.dir/build.make:76: CMakeFiles/my_bt_node.dir/src/test.cpp.o] Error 1
+[4.426s] gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/my_bt_node.dir/all] Error 2
+[4.426s] gmake: *** [Makefile:146: all] Error 2
+[4.431s] Invoked command in '/home/mujue/pros/rtdl/build/rtdl' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mujue/pros/rtdl/build/rtdl -- -j4 -l4

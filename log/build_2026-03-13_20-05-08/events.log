@@ -1,0 +1,111 @@
+[0.000000] (-) TimerEvent: {}
+[0.000549] (rtdl) JobQueued: {'identifier': 'rtdl', 'dependencies': OrderedDict()}
+[0.001068] (rtdl) JobStarted: {'identifier': 'rtdl'}
+[0.012648] (rtdl) JobProgress: {'identifier': 'rtdl', 'progress': 'cmake'}
+[0.012977] (rtdl) JobProgress: {'identifier': 'rtdl', 'progress': 'build'}
+[0.013403] (rtdl) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mujue/pros/rtdl/build/rtdl', '--', '-j4', '-l4'], 'cwd': '/home/mujue/pros/rtdl/build/rtdl', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:'), ('USER', 'mujue'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7891/'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mujue'), ('OLDPWD', '/home/mujue/pros/rtdl/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '1671'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://127.0.0.1:7890/'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mujue'), ('ALL_PROXY', 'socks://127.0.0.1:7891/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mujue'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/mujue/.cargo/bin:/home/mujue/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/mujue-virtual-machine:@/tmp/.ICE-unix/1653,unix/mujue-virtual-machine:/tmp/.ICE-unix/1653'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0f20666a_e44f_4403_86c3_9e9904fb33ec'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CO4AM3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mujue/pros/rtdl/build/rtdl'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.100199] (-) TimerEvent: {}
+[0.101698] (rtdl) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/my_bt_node.dir/src/test.cpp.o\x1b[0m\n'}
+[0.200512] (-) TimerEvent: {}
+[0.301191] (-) TimerEvent: {}
+[0.401783] (-) TimerEvent: {}
+[0.502585] (-) TimerEvent: {}
+[0.603371] (-) TimerEvent: {}
+[0.704021] (-) TimerEvent: {}
+[0.804757] (-) TimerEvent: {}
+[0.905486] (-) TimerEvent: {}
+[1.006553] (-) TimerEvent: {}
+[1.107281] (-) TimerEvent: {}
+[1.207909] (-) TimerEvent: {}
+[1.308576] (-) TimerEvent: {}
+[1.409575] (-) TimerEvent: {}
+[1.510271] (-) TimerEvent: {}
+[1.611069] (-) TimerEvent: {}
+[1.711803] (-) TimerEvent: {}
+[1.812469] (-) TimerEvent: {}
+[1.913145] (-) TimerEvent: {}
+[2.013801] (-) TimerEvent: {}
+[2.114535] (-) TimerEvent: {}
+[2.215253] (-) TimerEvent: {}
+[2.316211] (-) TimerEvent: {}
+[2.417244] (-) TimerEvent: {}
+[2.517950] (-) TimerEvent: {}
+[2.618788] (-) TimerEvent: {}
+[2.719516] (-) TimerEvent: {}
+[2.820411] (-) TimerEvent: {}
+[2.920958] (-) TimerEvent: {}
+[3.021543] (-) TimerEvent: {}
+[3.122312] (-) TimerEvent: {}
+[3.223047] (-) TimerEvent: {}
+[3.323723] (-) TimerEvent: {}
+[3.424349] (-) TimerEvent: {}
+[3.525119] (-) TimerEvent: {}
+[3.626233] (-) TimerEvent: {}
+[3.727657] (-) TimerEvent: {}
+[3.794319] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[3.794927] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:38:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected class-name before \xe2\x80\x98\x1b[01m\x1b[K:\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[3.794981] (rtdl) StderrLine: {'line': b'   38 | class LogMessage: public\x1b[01;31m\x1b[K:\x1b[m\x1b[K BT::SyncActionNode{\n'}
+[3.795014] (rtdl) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.795043] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:38:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K:\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[3.795072] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:38:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[K:\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[3.801560] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.801846] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:15:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kconversion from \xe2\x80\x98\x1b[01m\x1b[Kmain(int, char**)::<lambda(const string&, const BT::NodeConfig&)>\x1b[m\x1b[K\xe2\x80\x99 to non-scalar type \xe2\x80\x98\x1b[01m\x1b[KBT::NodeBuilder\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::function<std::unique_ptr<BT::TreeNode>(const std::__cxx11::basic_string<char>&, const BT::NodeConfig&)>\x1b[m\x1b[K\xe2\x80\x99} requested\n'}
+[3.801956] (rtdl) StderrLine: {'line': b'   15 |     \x1b[01;31m\x1b[K}\x1b[m\x1b[K\n'}
+[3.802104] (rtdl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.807139] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:27:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktree\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kfree\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.807247] (rtdl) StderrLine: {'line': b'   27 |         BT::StdCoutLogger logger(\x1b[01;31m\x1b[Ktree\x1b[m\x1b[K);\n'}
+[3.807297] (rtdl) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.807335] (rtdl) StderrLine: {'line': b'      |                                  \x1b[32m\x1b[Kfree\x1b[m\x1b[K\n'}
+[3.827761] (-) TimerEvent: {}
+[3.928438] (-) TimerEvent: {}
+[4.014007] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:76\x1b[m\x1b[K,\n'}
+[4.014261] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:259\x1b[m\x1b[K,\n'}
+[4.014298] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[4.014325] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[4.014349] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[4.014371] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[4.014392] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[4.014413] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[4.014435] (rtdl) StderrLine: {'line': b'/usr/include/c++/11/bits/unique_ptr.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Ktypename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = LogMessage; _Args = {const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, const BT::NodeConfig&, const std::shared_ptr<rclcpp::Node>&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<LogMessage, std::default_delete<LogMessage> >]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.014460] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:14:44:\x1b[m\x1b[K   required from here\n'}
+[4.014482] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:962:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass LogMessage\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.014507] (rtdl) StderrLine: {'line': b'  962 |     { return unique_ptr<_Tp>(\x1b[01;31m\x1b[Knew _Tp(std::forward<_Args>(__args)...)\x1b[m\x1b[K); }\n'}
+[4.014527] (rtdl) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.014548] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[4.014569] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:38:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass LogMessage\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.014590] (rtdl) StderrLine: {'line': b'   38 | class \x1b[01;36m\x1b[KLogMessage\x1b[m\x1b[K: public: BT::SyncActionNode{\n'}
+[4.014650] (rtdl) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.028786] (-) TimerEvent: {}
+[4.129321] (-) TimerEvent: {}
+[4.230062] (-) TimerEvent: {}
+[4.330782] (-) TimerEvent: {}
+[4.331915] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:76\x1b[m\x1b[K,\n'}
+[4.332110] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:259\x1b[m\x1b[K,\n'}
+[4.332148] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[4.332177] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[4.332200] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[4.332224] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[4.332251] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[4.332276] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[4.332298] (rtdl) StderrLine: {'line': b'/usr/include/c++/11/bits/unique_ptr.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid std::default_delete<_Tp>::operator()(_Tp*) const [with _Tp = LogMessage]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.332321] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:361:17:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::unique_ptr<_Tp, _Dp>::~unique_ptr() [with _Tp = LogMessage; _Dp = std::default_delete<LogMessage>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.332346] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:14:44:\x1b[m\x1b[K   required from here\n'}
+[4.332367] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:83:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid application of \xe2\x80\x98\x1b[01m\x1b[Ksizeof\x1b[m\x1b[K\xe2\x80\x99 to incomplete type \xe2\x80\x98\x1b[01m\x1b[KLogMessage\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.332390] (rtdl) StderrLine: {'line': b'   83 |         static_assert(\x1b[01;31m\x1b[Ksizeof(_Tp)\x1b[m\x1b[K>0,\n'}
+[4.332410] (rtdl) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.431155] (-) TimerEvent: {}
+[4.531792] (-) TimerEvent: {}
+[4.632578] (-) TimerEvent: {}
+[4.733313] (-) TimerEvent: {}
+[4.833842] (-) TimerEvent: {}
+[4.934352] (-) TimerEvent: {}
+[5.035057] (-) TimerEvent: {}
+[5.135795] (-) TimerEvent: {}
+[5.236348] (-) TimerEvent: {}
+[5.336900] (-) TimerEvent: {}
+[5.364993] (rtdl) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_bt_node.dir/build.make:76: CMakeFiles/my_bt_node.dir/src/test.cpp.o] Error 1\n'}
+[5.365942] (rtdl) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/my_bt_node.dir/all] Error 2\n'}
+[5.366531] (rtdl) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.371483] (rtdl) CommandEnded: {'returncode': 2}
+[5.382606] (rtdl) JobEnded: {'identifier': 'rtdl', 'rc': 2}
+[5.393365] (-) EventReactorShutdown: {}

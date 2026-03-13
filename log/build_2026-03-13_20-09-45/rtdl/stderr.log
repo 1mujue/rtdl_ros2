@@ -1,0 +1,22 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:6[m[K,
+                 from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1[m[K:
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:[m[K In member function ‘[01m[Kvirtual BT::NodeStatus LogMessage::tick()[m[K’:
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:58:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kros2_node_[m[K’ was not declared in this scope; did you mean ‘[01m[Kros_node_[m[K’?
+   58 |             RCLCPP_INFO([01;31m[Kros2_node_[m[K->get_logger(), "Init failed!");
+      |                         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:58:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   58 |             [01;31m[KRCLCPP_INFO[m[K(ros2_node_->get_logger(), "Init failed!");
+      |             [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_bt_node.dir/build.make:76: CMakeFiles/my_bt_node.dir/src/test.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/my_bt_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

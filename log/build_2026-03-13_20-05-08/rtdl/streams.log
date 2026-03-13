@@ -1,0 +1,51 @@
+[0.013s] Invoking command in '/home/mujue/pros/rtdl/build/rtdl': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mujue/pros/rtdl/build/rtdl -- -j4 -l4
+[0.101s] [ 50%] [32mBuilding CXX object CMakeFiles/my_bt_node.dir/src/test.cpp.o[0m
+[3.794s] In file included from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1[m[K:
+[3.794s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:38:25:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K:[m[K’ token
+[3.794s]    38 | class LogMessage: public[01;31m[K:[m[K BT::SyncActionNode{
+[3.794s]       |                         [01;31m[K^[m[K
+[3.794s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:38:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K:[m[K’ token
+[3.794s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:38:25:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K:[m[K’ token
+[3.801s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.801s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:15:5:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Kmain(int, char**)::<lambda(const string&, const BT::NodeConfig&)>[m[K’ to non-scalar type ‘[01m[KBT::NodeBuilder[m[K’ {aka ‘[01m[Kstd::function<std::unique_ptr<BT::TreeNode>(const std::__cxx11::basic_string<char>&, const BT::NodeConfig&)>[m[K’} requested
+[3.801s]    15 |     [01;31m[K}[m[K
+[3.801s]       |     [01;31m[K^[m[K
+[3.806s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:27:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ktree[m[K’ was not declared in this scope; did you mean ‘[01m[Kfree[m[K’?
+[3.806s]    27 |         BT::StdCoutLogger logger([01;31m[Ktree[m[K);
+[3.806s]       |                                  [01;31m[K^~~~[m[K
+[3.806s]       |                                  [32m[Kfree[m[K
+[4.013s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[4.013s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:259[m[K,
+[4.013s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3[m[K,
+[4.013s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16[m[K,
+[4.013s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17[m[K,
+[4.013s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17[m[K,
+[4.013s]                  from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1[m[K,
+[4.013s]                  from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1[m[K:
+[4.013s] /usr/include/c++/11/bits/unique_ptr.h: In instantiation of ‘[01m[Ktypename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = LogMessage; _Args = {const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, const BT::NodeConfig&, const std::shared_ptr<rclcpp::Node>&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<LogMessage, std::default_delete<LogMessage> >][m[K’:
+[4.013s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:14:44:[m[K   required from here
+[4.013s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:962:30:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass LogMessage[m[K’
+[4.013s]   962 |     { return unique_ptr<_Tp>([01;31m[Knew _Tp(std::forward<_Args>(__args)...)[m[K); }
+[4.013s]       |                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.013s] In file included from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1[m[K:
+[4.013s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:38:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass LogMessage[m[K’
+[4.014s]    38 | class [01;36m[KLogMessage[m[K: public: BT::SyncActionNode{
+[4.014s]       |       [01;36m[K^~~~~~~~~~[m[K
+[4.331s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[4.331s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:259[m[K,
+[4.331s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3[m[K,
+[4.331s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16[m[K,
+[4.331s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17[m[K,
+[4.331s]                  from [01m[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17[m[K,
+[4.331s]                  from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1[m[K,
+[4.331s]                  from [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1[m[K:
+[4.331s] /usr/include/c++/11/bits/unique_ptr.h: In instantiation of ‘[01m[Kvoid std::default_delete<_Tp>::operator()(_Tp*) const [with _Tp = LogMessage][m[K’:
+[4.331s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:361:17:[m[K   required from ‘[01m[Kstd::unique_ptr<_Tp, _Dp>::~unique_ptr() [with _Tp = LogMessage; _Dp = std::default_delete<LogMessage>][m[K’
+[4.331s] [01m[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:14:44:[m[K   required from here
+[4.331s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:83:23:[m[K [01;31m[Kerror: [m[Kinvalid application of ‘[01m[Ksizeof[m[K’ to incomplete type ‘[01m[KLogMessage[m[K’
+[4.331s]    83 |         static_assert([01;31m[Ksizeof(_Tp)[m[K>0,
+[4.331s]       |                       [01;31m[K^~~~~~~~~~~[m[K
+[5.364s] gmake[2]: *** [CMakeFiles/my_bt_node.dir/build.make:76: CMakeFiles/my_bt_node.dir/src/test.cpp.o] Error 1
+[5.365s] gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/my_bt_node.dir/all] Error 2
+[5.366s] gmake: *** [Makefile:146: all] Error 2
+[5.371s] Invoked command in '/home/mujue/pros/rtdl/build/rtdl' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mujue/pros/rtdl/build/rtdl -- -j4 -l4

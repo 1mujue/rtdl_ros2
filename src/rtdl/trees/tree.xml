@@ -1,0 +1,11 @@
+<root main_tree_to_execute = "Main" BTCPP_format = "4">
+  <BehaviorTree ID = "Main">
+    <Sequence>
+      <Init room = "{room}" item = "{item}" success = "{local_ok}"/>
+      <Precondition else = "FAILURE" if = "local_ok == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <LogMessage message = "{local_ok}"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

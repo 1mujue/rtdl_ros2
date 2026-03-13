@@ -1,0 +1,272 @@
+[0.000000] (-) TimerEvent: {}
+[0.000945] (rtdl) JobQueued: {'identifier': 'rtdl', 'dependencies': OrderedDict()}
+[0.004061] (rtdl) JobStarted: {'identifier': 'rtdl'}
+[0.008510] (rtdl) JobProgress: {'identifier': 'rtdl', 'progress': 'cmake'}
+[0.009209] (rtdl) JobProgress: {'identifier': 'rtdl', 'progress': 'build'}
+[0.009805] (rtdl) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mujue/pros/rtdl/build/rtdl', '--', '-j4', '-l4'], 'cwd': '/home/mujue/pros/rtdl/build/rtdl', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:'), ('USER', 'mujue'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7891/'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mujue'), ('OLDPWD', '/home/mujue/pros/rtdl/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '1691'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://127.0.0.1:7890/'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mujue'), ('ALL_PROXY', 'socks://127.0.0.1:7891/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mujue'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/mujue/.cargo/bin:/home/mujue/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/mujue-virtual-machine:@/tmp/.ICE-unix/1661,unix/mujue-virtual-machine:/tmp/.ICE-unix/1661'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e93c3669_8dac_4c17_a184_36ccb21859a6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.04Y4L3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mujue/pros/rtdl/build/rtdl'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.069263] (rtdl) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_bt_node\x1b[0m\n'}
+[0.086988] (rtdl) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/my_bt_node.dir/src/test.cpp.o\x1b[0m\n'}
+[0.100046] (-) TimerEvent: {}
+[0.200473] (-) TimerEvent: {}
+[0.301138] (-) TimerEvent: {}
+[0.401707] (-) TimerEvent: {}
+[0.502304] (-) TimerEvent: {}
+[0.603008] (-) TimerEvent: {}
+[0.703630] (-) TimerEvent: {}
+[0.804215] (-) TimerEvent: {}
+[0.905219] (-) TimerEvent: {}
+[1.006734] (-) TimerEvent: {}
+[1.033601] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.034249] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:10:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kto_string(const char*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.034347] (rtdl) StderrLine: {'line': b'   10 |     blackboard->set("room", \x1b[01;31m\x1b[Kstd::to_string((const char*)argv[1])\x1b[m\x1b[K);\n'}
+[1.034420] (rtdl) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.034480] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.034540] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.034614] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.034683] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.034753] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.034823] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.034892] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.034959] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.035030] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.035101] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.035168] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6660:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.035240] (rtdl) StderrLine: {'line': b' 6660 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(int __val)\n'}
+[1.035311] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.035393] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6660:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.035465] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:10:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.035556] (rtdl) StderrLine: {'line': b'   10 |     blackboard->set("room", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[1]\x1b[m\x1b[K));\n'}
+[1.035642] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.035711] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.035823] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.035932] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.036011] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.036081] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.036150] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.036220] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.036290] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.036356] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.036423] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.036489] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.036550] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.037808] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6671:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(unsigned int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.037870] (rtdl) StderrLine: {'line': b' 6671 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned __val)\n'}
+[1.037902] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.037947] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6671:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.037977] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:10:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.038006] (rtdl) StderrLine: {'line': b'   10 |     blackboard->set("room", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[1]\x1b[m\x1b[K));\n'}
+[1.038037] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.038063] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.038090] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.038113] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.038138] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.038161] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.038184] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.038207] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.038229] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.038311] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.038336] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.038358] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.038379] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.038399] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6679:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.038422] (rtdl) StderrLine: {'line': b' 6679 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(long __val)\n'}
+[1.038443] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.038464] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6679:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.038485] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:10:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.038507] (rtdl) StderrLine: {'line': b'   10 |     blackboard->set("room", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[1]\x1b[m\x1b[K));\n'}
+[1.038528] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.038547] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.038577] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.038602] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.038621] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.038641] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.038660] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.038679] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.038702] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.038722] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.038741] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.038760] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.038781] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.038800] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6690:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long unsigned int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.038823] (rtdl) StderrLine: {'line': b' 6690 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned long __val)\n'}
+[1.038845] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.038867] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6690:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.038888] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:10:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.038909] (rtdl) StderrLine: {'line': b'   10 |     blackboard->set("room", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[1]\x1b[m\x1b[K));\n'}
+[1.038934] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.038953] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.038972] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.038990] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.039011] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.039029] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.039108] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.039128] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.039147] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.039719] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.039767] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.039793] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.039816] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.039845] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6698:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long long int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.039873] (rtdl) StderrLine: {'line': b' 6698 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(long long __val)\n'}
+[1.039894] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.039914] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6698:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.039934] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:10:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong long int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.039956] (rtdl) StderrLine: {'line': b'   10 |     blackboard->set("room", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[1]\x1b[m\x1b[K));\n'}
+[1.039977] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.039997] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.040018] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.040038] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.040058] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.040077] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.040097] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.040118] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.040137] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.040156] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.040175] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.040193] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.040212] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.040231] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6710:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long long unsigned int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.040253] (rtdl) StderrLine: {'line': b' 6710 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned long long __val)\n'}
+[1.040275] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.040295] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6710:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.040315] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:10:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong long unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.040337] (rtdl) StderrLine: {'line': b'   10 |     blackboard->set("room", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[1]\x1b[m\x1b[K));\n'}
+[1.040361] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.040384] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.040404] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.040423] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:11:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kto_string(const char*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.040445] (rtdl) StderrLine: {'line': b'   11 |     blackboard->set("item", \x1b[01;31m\x1b[Kstd::to_string((const char*)argv[2])\x1b[m\x1b[K);\n'}
+[1.040467] (rtdl) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.040488] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.040508] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.040528] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.040550] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.040607] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.040637] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.040660] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.040681] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.040709] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.040731] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.040751] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6660:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.040772] (rtdl) StderrLine: {'line': b' 6660 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(int __val)\n'}
+[1.040793] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.040813] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6660:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.040833] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:11:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.040854] (rtdl) StderrLine: {'line': b'   11 |     blackboard->set("item", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[2]\x1b[m\x1b[K));\n'}
+[1.040874] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.040895] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.040915] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.040944] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.040963] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.040983] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.041002] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.041022] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.041041] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.041060] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.041078] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.041097] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.041119] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.041139] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6671:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(unsigned int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.041159] (rtdl) StderrLine: {'line': b' 6671 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned __val)\n'}
+[1.041179] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.041198] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6671:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.041220] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:11:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.041396] (rtdl) StderrLine: {'line': b'   11 |     blackboard->set("item", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[2]\x1b[m\x1b[K));\n'}
+[1.041524] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.041647] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.041708] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.041762] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.041817] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.041875] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.041976] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.042038] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.042083] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.042111] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.042138] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.042160] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.042182] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.042202] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6679:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.042225] (rtdl) StderrLine: {'line': b' 6679 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(long __val)\n'}
+[1.042340] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.042770] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6679:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.042881] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:11:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.042956] (rtdl) StderrLine: {'line': b'   11 |     blackboard->set("item", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[2]\x1b[m\x1b[K));\n'}
+[1.043015] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.043076] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.043129] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.043180] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.043231] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.043279] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.043326] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.043376] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.043423] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.043468] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.043514] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.043561] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.043635] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.043687] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6690:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long unsigned int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.043741] (rtdl) StderrLine: {'line': b' 6690 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned long __val)\n'}
+[1.043790] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.043848] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6690:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.043898] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:11:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.043952] (rtdl) StderrLine: {'line': b'   11 |     blackboard->set("item", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[2]\x1b[m\x1b[K));\n'}
+[1.044001] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.044050] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.044099] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.044147] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.044196] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.044242] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.044287] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.044336] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.044464] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.044784] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.044875] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.044962] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.045024] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.045089] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6698:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long long int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.045152] (rtdl) StderrLine: {'line': b' 6698 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(long long __val)\n'}
+[1.045211] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.045265] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6698:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.045321] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:11:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong long int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.045385] (rtdl) StderrLine: {'line': b'   11 |     blackboard->set("item", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[2]\x1b[m\x1b[K));\n'}
+[1.045445] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.045504] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.045558] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.045628] (rtdl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/string:55\x1b[m\x1b[K,\n'}
+[1.045683] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/stdexcept:39\x1b[m\x1b[K,\n'}
+[1.045795] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/system_error:41\x1b[m\x1b[K,\n'}
+[1.045878] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/contrib/expected.hpp:261\x1b[m\x1b[K,\n'}
+[1.045942] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/basic_types.h:3\x1b[m\x1b[K,\n'}
+[1.046001] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/tree_node.h:16\x1b[m\x1b[K,\n'}
+[1.046060] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/leaf_node.h:17\x1b[m\x1b[K,\n'}
+[1.046116] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.046178] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/actions.hpp:1\x1b[m\x1b[K,\n'}
+[1.046236] (rtdl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:1\x1b[m\x1b[K:\n'}
+[1.046291] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6710:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long long unsigned int)\x1b[m\x1b[K\xe2\x80\x99 (near match)\n'}
+[1.046349] (rtdl) StderrLine: {'line': b' 6710 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned long long __val)\n'}
+[1.046406] (rtdl) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.046461] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/basic_string.h:6710:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[1.046517] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:11:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong long unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.046602] (rtdl) StderrLine: {'line': b'   11 |     blackboard->set("item", std::to_string(\x1b[01;31m\x1b[K(const char*)argv[2]\x1b[m\x1b[K));\n'}
+[1.046673] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.046731] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[1.046781] (rtdl) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.046832] (rtdl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mujue/pros/rtdl/src/rtdl/src/test.cpp:5:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kargc\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.046887] (rtdl) StderrLine: {'line': b'    5 | int main(\x1b[01;35m\x1b[Kint argc\x1b[m\x1b[K, char** argv){\n'}
+[1.046937] (rtdl) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~~~^~~~\x1b[m\x1b[K\n'}
+[1.106933] (-) TimerEvent: {}
+[1.207669] (-) TimerEvent: {}
+[1.308726] (-) TimerEvent: {}
+[1.409366] (-) TimerEvent: {}
+[1.510745] (-) TimerEvent: {}
+[1.611397] (-) TimerEvent: {}
+[1.712138] (-) TimerEvent: {}
+[1.812750] (-) TimerEvent: {}
+[1.913436] (-) TimerEvent: {}
+[2.008226] (rtdl) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_bt_node.dir/build.make:76: CMakeFiles/my_bt_node.dir/src/test.cpp.o] Error 1\n'}
+[2.008535] (rtdl) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/my_bt_node.dir/all] Error 2\n'}
+[2.008620] (rtdl) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[2.012388] (rtdl) CommandEnded: {'returncode': 2}
+[2.015334] (-) TimerEvent: {}
+[2.023677] (rtdl) JobEnded: {'identifier': 'rtdl', 'rc': 2}
+[2.034590] (-) EventReactorShutdown: {}
