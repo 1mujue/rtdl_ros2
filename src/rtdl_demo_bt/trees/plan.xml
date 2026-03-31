@@ -1,0 +1,22 @@
+<root main_tree_to_execute = "Main" BTCPP_format = "4">
+  <BehaviorTree ID = "Main">
+    <Sequence>
+      <NavTo tolerance = "0.100000" y = "2.000000" x = "2.000000" robot_name = "CAR" message = "{nav_message}" success = "{nav_success}"/>
+      <Precondition else = "FAILURE" if = "nav_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Pick object_name = "CUP" robot_name = "CAR" message = "{pick_message}" success = "{pick_success}"/>
+      <Precondition else = "FAILURE" if = "pick_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <NavTo tolerance = "0.100000" y = "2.000000" x = "-2.000000" robot_name = "CAR" message = "{nav_message}" success = "{nav_success}"/>
+      <Precondition else = "FAILURE" if = "nav_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Place location_name = "TABLE" object_name = "CUP" robot_name = "CAR" message = "{place_message}" success = "{place_success}"/>
+      <Precondition else = "FAILURE" if = "place_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+    </Sequence>
+  </BehaviorTree>
+</root>

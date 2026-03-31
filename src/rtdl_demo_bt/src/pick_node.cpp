@@ -16,7 +16,9 @@ BT::PortsList PickNode::providedPorts()
 {
   return {
     BT::InputPort<std::string>("robot_name"),
-    BT::InputPort<std::string>("object_name")
+    BT::InputPort<std::string>("object_name"),
+    BT::OutputPort<std::string>("message"),
+    BT::OutputPort<bool>("success")
   };
 }
 
@@ -45,6 +47,9 @@ BT::NodeStatus PickNode::tick()
     request->object_name.c_str(),
     response->success ? "true" : "false",
     response->message.c_str());
+
+  setOutput("message", response->message);
+  setOutput("success", response->success);
 
   return response->success ? BT::NodeStatus::SUCCESS : BT::NodeStatus::FAILURE;
 }

@@ -13,7 +13,9 @@ BT::PortsList NavToNode::providedPorts(){
         BT::InputPort<std::string>("robot_name"),
         BT::InputPort<double>("x"),
         BT::InputPort<double>("y"),
-        BT::InputPort<double>("tolerance")
+        BT::InputPort<double>("tolerance"),
+        BT::OutputPort<std::string>("message"),
+        BT::OutputPort<bool>("success"),
     };
 }
 BT::NodeStatus NavToNode::tick() {
@@ -38,6 +40,9 @@ BT::NodeStatus NavToNode::tick() {
     req->x, req->y,
     res->success ? "true" : "false",
     res->message.c_str());
+
+    setOutput("message", res->message);
+    setOutput("success", res->success);
 
     return res->success ? BT::NodeStatus::SUCCESS : BT::NodeStatus::FAILURE;
 };

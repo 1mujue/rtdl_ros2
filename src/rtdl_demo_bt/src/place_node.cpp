@@ -17,7 +17,9 @@ BT::PortsList PlaceNode::providedPorts()
   return {
     BT::InputPort<std::string>("robot_name"),
     BT::InputPort<std::string>("object_name"),
-    BT::InputPort<std::string>("location_name")
+    BT::InputPort<std::string>("location_name"),
+    BT::OutputPort<std::string>("message"),
+    BT::OutputPort<bool>("success"),
   };
 }
 
@@ -56,6 +58,9 @@ BT::NodeStatus PlaceNode::tick()
     request->location_name.c_str(),
     response->success ? "true" : "false",
     response->message.c_str());
+
+  setOutput("message", response->message);
+  setOutput("success", response->success);
 
   return response->success ? BT::NodeStatus::SUCCESS : BT::NodeStatus::FAILURE;
 }
