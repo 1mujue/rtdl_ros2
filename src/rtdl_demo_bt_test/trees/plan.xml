@@ -1,0 +1,10 @@
+<root main_tree_to_execute = "Main" BTCPP_format = "4">
+  <BehaviorTree ID = "Main">
+    <Sequence>
+      <NavTo tolerance = "0.100000" y = "2.000000" x = "2.000000" robot_name = "CAR" message = "{nav_msg}" success = "{nav_suc}"/>
+      <Pick object_name = "CUP" robot_name = "CAR" message = "{pick_msg}" success = "{pick_suc}"/>
+      <NavTo tolerance = "0.100000" y = "2.000000" x = "-2.000000" robot_name = "CAR" message = "{nav_msg}" success = "{nav_suc}"/>
+      <Place location_name = "TABLE" object_name = "CUP" robot_name = "CAR" message = "{place_msg}" success = "{place_suc}"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
