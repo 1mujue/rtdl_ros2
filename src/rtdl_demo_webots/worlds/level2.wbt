@@ -1,0 +1,317 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.21746962522012142 0.9252344661153328 -0.3108828474182759 1.2947097005674135
+  position -1.6847153375462147 0.42661691831822257 5.809956223186612
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 10 10
+}
+
+DEF SHELF Solid {
+  translation 2.2 1.5 0.35
+  children [
+    DEF SHELF_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.32 0.16
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1.8 1.0 0.7
+      }
+    }
+  ]
+  name "SHELF"
+  boundingObject USE SHELF_SHAPE
+  physics Physics {
+    density -1
+    mass 8
+  }
+}
+
+DEF MEDICINE_BOTTLE Solid {
+  translation 2.55 1.5 0.85
+  children [
+    DEF MEDICINE_BOTTLE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.95 0.95 0.95
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        bottom TRUE
+        height 0.35
+        radius 0.12
+        side TRUE
+        top TRUE
+        subdivision 24
+      }
+    }
+  ]
+  name "MEDICINE_BOTTLE"
+  boundingObject USE MEDICINE_BOTTLE_SHAPE
+  physics Physics {
+    density 1
+  }
+}
+
+DEF FRONT_CRATE Solid {
+  translation 1.85 1.5 0.85
+  children [
+    DEF FRONT_CRATE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.9 0.45 0.1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.35
+      }
+    }
+  ]
+  name "FRONT_CRATE"
+  boundingObject USE FRONT_CRATE_SHAPE
+  physics Physics {
+    density 1
+  }
+}
+
+DEF TEMP_ZONE Solid {
+  translation -2.0 -1.8 0.05
+  children [
+    DEF TEMP_ZONE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.7 0.9
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        bottom TRUE
+        height 0.04
+        radius 0.5
+        side TRUE
+        top TRUE
+        subdivision 36
+      }
+    }
+  ]
+  name "TEMP_ZONE"
+  boundingObject USE TEMP_ZONE_SHAPE
+}
+
+DEF MEDICAL_TABLE Solid {
+  translation -2.3 2.0 0.35
+  children [
+    DEF MEDICAL_TABLE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.35 0.8 0.35
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1.4 1.0 0.7
+      }
+    }
+  ]
+  name "MEDICAL_TABLE"
+  boundingObject USE MEDICAL_TABLE_SHAPE
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+
+DEF FRONT_CRATE_ORIGIN Solid {
+  translation 1.85 1.5 0.85
+  children [
+    DEF FRONT_CRATE_ORIGIN_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        transparency 0.65
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        bottom TRUE
+        height 0.02
+        radius 0.18
+        side TRUE
+        top TRUE
+        subdivision 24
+      }
+    }
+  ]
+  name "FRONT_CRATE_ORIGIN"
+}
+
+DEF BRIDGE Robot {
+  name "BRIDGE"
+  controller "<extern>"
+  supervisor TRUE
+}
+DEF CAR Robot {
+  translation 0 0 0.05
+  rotation 0 0 -1 2.78858
+  children [
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 0.917647 0.145098 0.145098
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.1 0.05
+      }
+    }
+    DEF WHEEL1 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "rm_wheel1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0.305882 0.898039 0.25098
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+              subdivision 24
+            }
+          }
+        ]
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL2 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 -0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "rm_wheel2"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 -0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          USE WHEEL
+        ]
+        name "solid(1)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL3 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.05 0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "rm_wheel3"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05 0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          USE WHEEL
+        ]
+        name "solid(2)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL4 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.05 -0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "rm_wheel4"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05 -0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          USE WHEEL
+        ]
+        name "solid(3)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF DS_RIGHT DistanceSensor {
+      translation 0.1 -0.03 0
+      rotation 0 0 1 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.184314 0.596078 0.847059
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds_right"
+    }
+    DEF DS_LEFT DistanceSensor {
+      translation 0.1 0.03 0
+      rotation 0 0 1 0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.184314 0.596078 0.847059
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds_left"
+    }
+  ]
+  name "CAR"
+  boundingObject USE BODY
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "<extern>"
+}

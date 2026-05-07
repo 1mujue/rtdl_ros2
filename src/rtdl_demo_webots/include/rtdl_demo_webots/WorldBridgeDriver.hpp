@@ -19,12 +19,13 @@
 struct RobotEntry{
     std::string name;
     WbNodeRef node{0};
+    double interaction_distance = 0.6;
 };
 struct ObjectEntry{
     std::string name;
     std::string type;
-    bool is_support{false};
-    bool is_pickable{false};
+    bool place_target{false};
+    bool pick_target{false};
     WbNodeRef node{0};
 };
 
@@ -38,22 +39,15 @@ public:
     void step() override;
 private:
     void updateCachedState();
-    void registerEntities();
+    void registerEntities(const std::string& entitiy_config_path);
     std::string inferSupportName(const ObjectEntry& o, const double* object_pos);
     bool isHeldByAnyRobot(const std::string& obj_name) const ;
     std::string holderRobotName(const std::string& obj_name) const;
     ObjectEntry* findObject(const std::string& name);
     RobotEntry* findRobot(const std::string& name);
-    bool isNear(const double* a_pos, const double* b_pos, double threshold) const ;
     void enablePhysics(WbNodeRef ref);
     void disablePhysics(WbNodeRef ref);
-    bool getBoxSizeFromSolid(WbNodeRef solid_node, double size_out[3]) const ;
-    bool getCylinderHeightFromSolid(WbNodeRef solid_node, double &height_out) const ;
-    bool isOnSupport(
-    const ObjectEntry & object,
-    const double * object_pos,
-    const ObjectEntry & support,
-    const double * support_pos) const;
+    
     void handleGetWorldState(
         const std::shared_ptr<rtdl_demo_interfaces::srv::GetWorldState::Request> req,
         std::shared_ptr<rtdl_demo_interfaces::srv::GetWorldState::Response> res

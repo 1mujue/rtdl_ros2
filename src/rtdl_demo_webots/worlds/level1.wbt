@@ -42,7 +42,6 @@ DEF CUP Solid {
 }
 DEF TABLE Solid {
   translation -2 2 0.6
-  translation -2 2 0.6
   children [
     DEF TABLE_SHAPE Shape {
       appearance PBRAppearance {

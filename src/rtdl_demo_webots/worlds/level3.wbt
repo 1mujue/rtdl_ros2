@@ -1,0 +1,287 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.21746962522012142 0.9252344661153328 -0.3108828474182759 1.2947097005674135
+  position -1.6847153375462147 0.42661691831822257 5.809956223186612
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 10 10
+}
+
+DEF BOX_BOTTOM Solid {
+  translation 2 -1 0.15
+  children [
+    DEF BOX_BOTTOM_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.75 0.75 0.75
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.8 0.8 0.3
+      }
+    }
+  ]
+  name "BOX_BOTTOM"
+  boundingObject USE BOX_BOTTOM_SHAPE
+  physics Physics {
+    density 1
+  }
+}
+
+DEF BOX_MIDDLE Solid {
+  translation 2 -1 0.45
+  children [
+    DEF BOX_MIDDLE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.05 0.25 0.95
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.8 0.8 0.3
+      }
+    }
+  ]
+  name "BOX_MIDDLE"
+  boundingObject USE BOX_MIDDLE_SHAPE
+  physics Physics {
+    density 1
+  }
+}
+
+DEF BOX_TOP Solid {
+  translation 2 -1 0.75
+  children [
+    DEF BOX_TOP_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.1 0.8 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.8 0.8 0.3
+      }
+    }
+  ]
+  name "BOX_TOP"
+  boundingObject USE BOX_TOP_SHAPE
+  physics Physics {
+    density 1
+  }
+}
+
+DEF TEMP_TABLE Solid {
+  translation -2.2 -1.8 0.25
+  children [
+    DEF TEMP_TABLE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1.2 1.0 0.5
+      }
+    }
+  ]
+  name "TEMP_TABLE"
+  boundingObject USE TEMP_TABLE_SHAPE
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+
+DEF INSPECTION_TABLE Solid {
+  translation -2.2 2.0 0.35
+  children [
+    DEF INSPECTION_TABLE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.32 0.12
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1.4 1.0 0.7
+      }
+    }
+  ]
+  name "INSPECTION_TABLE"
+  boundingObject USE INSPECTION_TABLE_SHAPE
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+
+DEF BRIDGE Robot {
+  name "BRIDGE"
+  controller "<extern>"
+  supervisor TRUE
+}
+DEF CAR Robot {
+  translation 0 0 0.05
+  rotation 0 0 -1 2.78858
+  children [
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 0.917647 0.145098 0.145098
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.1 0.05
+      }
+    }
+    DEF WHEEL1 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "rm_wheel1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0.305882 0.898039 0.25098
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+              subdivision 24
+            }
+          }
+        ]
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL2 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 -0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "rm_wheel2"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 -0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          USE WHEEL
+        ]
+        name "solid(1)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL3 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.05 0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "rm_wheel3"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05 0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          USE WHEEL
+        ]
+        name "solid(2)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF WHEEL4 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.05 -0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "rm_wheel4"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05 -0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          USE WHEEL
+        ]
+        name "solid(3)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF DS_RIGHT DistanceSensor {
+      translation 0.1 -0.03 0
+      rotation 0 0 1 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.184314 0.596078 0.847059
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds_right"
+    }
+    DEF DS_LEFT DistanceSensor {
+      translation 0.1 0.03 0
+      rotation 0 0 1 0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.184314 0.596078 0.847059
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds_left"
+    }
+  ]
+  name "CAR"
+  boundingObject USE BODY
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "<extern>"
+}

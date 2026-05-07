@@ -1,0 +1,25 @@
+objects:
+  - id: BOX_TOP
+    def: BOX_TOP
+    pick_target: true
+    place_target: false
+
+  - id: BOX_MIDDLE
+    def: BOX_MIDDLE
+    pick_target: true
+    place_target: false
+
+  - id: BOX_BOTTOM
+    def: BOX_BOTTOM
+    pick_target: true
+    place_target: true
+
+  - id: TEMP_TABLE
+    def: TEMP_TABLE
+    pick_target: false
+    place_target: true
+
+  - id: INSPECTION_TABLE
+    def: INSPECTION_TABLE
+    pick_target: false
+    place_target: true

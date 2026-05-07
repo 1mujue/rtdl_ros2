@@ -1,0 +1,29 @@
+robots:
+  - id: CAR
+    def: CAR
+
+objects:
+  - id: FRONT_CRATE
+    def: FRONT_CRATE
+    pick_target: true
+    place_target: false
+
+  - id: MEDICINE_BOTTLE
+    def: MEDICINE_BOTTLE
+    pick_target: true
+    place_target: false
+
+  - id: TEMP_ZONE
+    def: TEMP_ZONE
+    pick_target: false
+    place_target: true
+
+  - id: MEDICAL_TABLE
+    def: MEDICAL_TABLE
+    pick_target: false
+    place_target: true
+
+  - id: SHELF
+    def: SHELF
+    pick_target: false
+    place_target: true
