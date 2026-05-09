@@ -15,6 +15,7 @@
 #include "rtdl_demo_interfaces/srv/get_world_state.hpp"
 #include "rtdl_demo_interfaces/srv/pick_pri.hpp"
 #include "rtdl_demo_interfaces/srv/place_pri.hpp"
+#include "std_srvs/srv/trigger.hpp"
 
 struct RobotEntry{
     std::string name;
@@ -52,6 +53,10 @@ private:
         const std::shared_ptr<rtdl_demo_interfaces::srv::GetWorldState::Request> req,
         std::shared_ptr<rtdl_demo_interfaces::srv::GetWorldState::Response> res
     );
+    void handleResetWorld(
+        const std::shared_ptr<std_srvs::srv::Trigger::Request> req,
+        std::shared_ptr<std_srvs::srv::Trigger::Response> res
+    );
     void handlePickPri(
         const std::shared_ptr<rtdl_demo_interfaces::srv::PickPri::Request> req,
         std::shared_ptr<rtdl_demo_interfaces::srv::PickPri::Response> res
@@ -70,6 +75,7 @@ private:
     rtdl_demo_interfaces::msg::WorldState cached_state_{};
 
     rclcpp::Service<rtdl_demo_interfaces::srv::GetWorldState>::SharedPtr get_world_state_srv_;
+    rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr reset_world_srv_;
     rclcpp::Service<rtdl_demo_interfaces::srv::PickPri>::SharedPtr pick_pri_srv_;
     rclcpp::Service<rtdl_demo_interfaces::srv::PlacePri>::SharedPtr place_pri_srv_;
 

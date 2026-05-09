@@ -3,6 +3,7 @@
 #include <cmath>
 #include <stdexcept>
 #include <yaml-cpp/yaml.h>
+#include <iostream>
 
 #include "webots/robot.h"
 #include "webots/supervisor.h"
@@ -293,6 +294,17 @@ namespace rtdl_demo_webots
 					this,
 					std::placeholders::_1,
 					std::placeholders::_2));
+		
+		reset_world_srv_ = 
+			node_->create_service<std_srvs::srv::Trigger>(
+				"/reset_world",
+				std::bind(
+					&WorldBridgeDriver::handleResetWorld,
+					this,
+					std::placeholders::_1,
+					std::placeholders::_2
+				)
+			);
 
 		pick_pri_srv_ =
 			node_->create_service<rtdl_demo_interfaces::srv::PickPri>(
@@ -332,6 +344,7 @@ namespace rtdl_demo_webots
 	void WorldBridgeDriver::registerEntities(const std::string& entitiy_config_path)
 	{
 		YAML::Node config = YAML::LoadFile(entitiy_config_path);
+		std::cout << "load entity config successfully.\n";
 
 		robots_.clear();
 		objects_.clear();
@@ -530,6 +543,17 @@ namespace rtdl_demo_webots
 		res->success = true;
 		res->message = "Real Webots world state queried successfully.";
 		res->state = cached_state_;
+	}
+
+	void WorldBridgeDriver::handleResetWorld(
+        const std::shared_ptr<std_srvs::srv::Trigger::Request> req,
+        std::shared_ptr<std_srvs::srv::Trigger::Response> res
+    )
+	{
+		carried_by_robot_.clear();
+		wb_supervisor_simulation_reset();
+		res->success = true;
+		res->message = "Webots simulation reset requested.";
 	}
 
 	void WorldBridgeDriver::handlePickPri(

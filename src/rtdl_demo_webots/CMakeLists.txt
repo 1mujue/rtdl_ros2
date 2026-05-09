@@ -13,6 +13,7 @@ find_package(webots_ros2_driver REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(rtdl_demo_interfaces REQUIRED)
 find_package(yaml-cpp REQUIRED)
+find_package(std_srvs REQUIRED)
 
 add_library(rtdl_demo_webots_driver SHARED
   src/CarDriver.cpp
@@ -25,6 +26,7 @@ target_include_directories(rtdl_demo_webots_driver PUBLIC
 )
 
 ament_target_dependencies(rtdl_demo_webots_driver
+  std_srvs
   yaml-cpp
   rclcpp
   geometry_msgs

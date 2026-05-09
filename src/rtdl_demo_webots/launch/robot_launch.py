@@ -45,19 +45,23 @@ def generate_launch_description():
 
     webots = WebotsLauncher(world=world)
 
+    # VERY IMPORTANT: we might reset the world, and if we don't set respawn=True,
+    # then after reset, the controller might disconnect forever.
     car_driver = WebotsController(
         robot_name="CAR",
         parameters=[
             {"robot_description": car_urdf},
-        ]
+        ],
+        respawn=True,
     )
 
     bridge_driver = WebotsController(
         robot_name="BRIDGE",
         parameters=[
             {"robot_description": bridge_urdf},
-            {"entitiy_config": entity_config},
-        ]
+            {"entity_config": entity_config},
+        ],
+        respawn=True,
     )
 
     return LaunchDescription([

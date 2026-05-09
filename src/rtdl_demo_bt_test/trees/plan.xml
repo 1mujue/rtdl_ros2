@@ -1,10 +1,22 @@
-<root main_tree_to_execute = "Main" BTCPP_format = "4">
+<root main_tree_to_execute = "pick_and_place_cup" BTCPP_format = "4">
   <BehaviorTree ID = "pick_and_place_cup">
     <Sequence>
-      <NavTo tolerance = "0.500000" y = "2.000000" x = "2.000000" robot_name = "CAR" message = "{nav_cup_message}" success = "{nav_cup_success}"/>
-      <Pick object_name = "CUP" robot_name = "CAR" message = "{pick_message}" success = "{pick_success}"/>
-      <NavTo tolerance = "0.500000" y = "2.000000" x = "-2.000000" robot_name = "CAR" message = "{nav_table_message}" success = "{nav_table_success}"/>
-      <Place location_name = "TABLE" object_name = "CUP" robot_name = "CAR" message = "{place_message}" success = "{place_success}"/>
+      <NavTo tolerance = "0.600000" y = "2.000000" x = "2.000000" robot_name = "CAR" message = "{nav1_msg}" success = "{nav1_success}"/>
+      <Precondition else = "FAILURE" if = "nav1_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Pick object_name = "CUP" robot_name = "CAR" message = "{pick_msg}" success = "{pick_success}"/>
+      <Precondition else = "FAILURE" if = "pick_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <NavTo tolerance = "0.600000" y = "2.000000" x = "-2.000000" robot_name = "CAR" message = "{nav2_msg}" success = "{nav2_success}"/>
+      <Precondition else = "FAILURE" if = "nav2_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Place location_name = "TABLE" object_name = "CUP" robot_name = "CAR" message = "{place_msg}" success = "{place_success}"/>
+      <Precondition else = "FAILURE" if = "place_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
     </Sequence>
   </BehaviorTree>
 </root>
