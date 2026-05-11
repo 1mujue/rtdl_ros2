@@ -1,7 +1,7 @@
 robots:
   - id: CAR
     def: CAR
-    interaction_distance: 0.6
+    interaction_distance: 2
 
 objects:
   - id: CUP

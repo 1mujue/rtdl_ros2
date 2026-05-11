@@ -279,6 +279,77 @@ namespace rtdl_demo_webots
 
 		return dist2d(robot_pos, target_pos) <= robot.interaction_distance;
 	}
+	static bool saveNodePose(WbNodeRef node, PoseSnapshot &pose)
+	{
+		if (!node) {
+			return false;
+		}
+
+		WbFieldRef translation_field =
+			wb_supervisor_node_get_field(node, "translation");
+
+		WbFieldRef rotation_field =
+			wb_supervisor_node_get_field(node, "rotation");
+
+		if (!translation_field || !rotation_field) {
+			return false;
+		}
+
+		const double *translation =
+			wb_supervisor_field_get_sf_vec3f(translation_field);
+
+		const double *rotation =
+			wb_supervisor_field_get_sf_rotation(rotation_field);
+
+		if (!translation || !rotation) {
+			return false;
+		}
+
+		pose.translation = {
+			translation[0],
+			translation[1],
+			translation[2]
+		};
+
+		pose.rotation = {
+			rotation[0],
+			rotation[1],
+			rotation[2],
+			rotation[3]
+		};
+
+		return true;
+	}
+	static bool restoreNodePose(WbNodeRef node, const PoseSnapshot &pose)
+	{
+		if (!node) {
+			return false;
+		}
+
+		WbFieldRef translation_field =
+			wb_supervisor_node_get_field(node, "translation");
+
+		WbFieldRef rotation_field =
+			wb_supervisor_node_get_field(node, "rotation");
+
+		if (!translation_field || !rotation_field) {
+			return false;
+		}
+
+		wb_supervisor_field_set_sf_vec3f(
+			translation_field,
+			pose.translation.data()
+		);
+
+		wb_supervisor_field_set_sf_rotation(
+			rotation_field,
+			pose.rotation.data()
+		);
+
+		wb_supervisor_node_reset_physics(node);
+
+		return true;
+	}
 	void WorldBridgeDriver::init(
 		webots_ros2_driver::WebotsNode *node,
 		std::unordered_map<std::string, std::string> &properties)
@@ -338,6 +409,7 @@ namespace rtdl_demo_webots
 			throw std::runtime_error("Parameter 'entity_config' is empty.");
 		}
 		registerEntities(entity_config_path);
+		saveInitialPoses();
 
 		RCLCPP_INFO(node_->get_logger(), "WorldBridgeDriver initialized.");
 	}
@@ -402,6 +474,37 @@ namespace rtdl_demo_webots
 					def.c_str(),
 					is_pick_target,
 					is_place_target
+				);
+			}
+		}
+	}
+	void WorldBridgeDriver::saveInitialPoses()
+	{
+		initial_robot_poses_.clear();
+		initial_object_poses_.clear();
+
+		for (const auto &[name, robot] : robots_) {
+			PoseSnapshot pose;
+			if (saveNodePose(robot.node, pose)) {
+				initial_robot_poses_[name] = pose;
+			} else {
+				RCLCPP_WARN(
+					node_->get_logger(),
+					"Failed to save initial pose for robot %s",
+					name.c_str()
+				);
+			}
+		}
+
+		for (const auto &[name, object] : objects_) {
+			PoseSnapshot pose;
+			if (saveNodePose(object.node, pose)) {
+				initial_object_poses_[name] = pose;
+			} else {
+				RCLCPP_WARN(
+					node_->get_logger(),
+					"Failed to save initial pose for object %s",
+					name.c_str()
 				);
 			}
 		}
@@ -546,14 +649,70 @@ namespace rtdl_demo_webots
 	}
 
 	void WorldBridgeDriver::handleResetWorld(
-        const std::shared_ptr<std_srvs::srv::Trigger::Request> req,
-        std::shared_ptr<std_srvs::srv::Trigger::Response> res
-    )
+    const std::shared_ptr<std_srvs::srv::Trigger::Request> req,
+    std::shared_ptr<std_srvs::srv::Trigger::Response> res)
 	{
+		(void)req;
+
+		bool ok = true;
+
 		carried_by_robot_.clear();
-		wb_supervisor_simulation_reset();
-		res->success = true;
-		res->message = "Webots simulation reset requested.";
+
+		for (auto &[name, object] : objects_) {
+			auto pose_it = initial_object_poses_.find(name);
+			if (pose_it == initial_object_poses_.end()) {
+				ok = false;
+				RCLCPP_WARN(
+					node_->get_logger(),
+					"No initial pose saved for object %s",
+					name.c_str()
+				);
+				continue;
+			}
+
+			if (!restoreNodePose(object.node, pose_it->second)) {
+				ok = false;
+				RCLCPP_WARN(
+					node_->get_logger(),
+					"Failed to restore object %s",
+					name.c_str()
+				);
+			}
+
+			enablePhysics(object.node);
+			wb_supervisor_node_reset_physics(object.node);
+		}
+
+		for (auto &[name, robot] : robots_) {
+			auto pose_it = initial_robot_poses_.find(name);
+			if (pose_it == initial_robot_poses_.end()) {
+				ok = false;
+				RCLCPP_WARN(
+					node_->get_logger(),
+					"No initial pose saved for robot %s",
+					name.c_str()
+				);
+				continue;
+			}
+
+			if (!restoreNodePose(robot.node, pose_it->second)) {
+				ok = false;
+				RCLCPP_WARN(
+					node_->get_logger(),
+					"Failed to restore robot %s",
+					name.c_str()
+				);
+			}
+
+			wb_supervisor_node_reset_physics(robot.node);
+		}
+
+		wb_supervisor_simulation_set_mode(WB_SUPERVISOR_SIMULATION_MODE_REAL_TIME);
+
+		res->success = ok;
+		res->message = ok
+			? "World soft reset successfully."
+			: "World soft reset completed with warnings.";
 	}
 
 	void WorldBridgeDriver::handlePickPri(

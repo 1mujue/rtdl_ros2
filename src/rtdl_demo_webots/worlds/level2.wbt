@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.21746962522012142 0.9252344661153328 -0.3108828474182759 1.2947097005674135
-  position -1.6847153375462147 0.42661691831822257 5.809956223186612
+  orientation 0.2997283011458883 0.6787196740636728 -0.6704495130366651 1.1648896515856741
+  position -1.138067989075865 3.535750960484457 4.370101642254451
 }
 TexturedBackground {
 }
@@ -17,31 +17,8 @@ TexturedBackgroundLight {
 RectangleArena {
   floorSize 10 10
 }
-
-DEF SHELF Solid {
-  translation 2.2 1.5 0.35
-  children [
-    DEF SHELF_SHAPE Shape {
-      appearance PBRAppearance {
-        baseColor 0.5 0.32 0.16
-        roughness 1
-        metalness 0
-      }
-      geometry Box {
-        size 1.8 1.0 0.7
-      }
-    }
-  ]
-  name "SHELF"
-  boundingObject USE SHELF_SHAPE
-  physics Physics {
-    density -1
-    mass 8
-  }
-}
-
 DEF MEDICINE_BOTTLE Solid {
-  translation 2.55 1.5 0.85
+  translation 2.55 1.5 0.2
   children [
     DEF MEDICINE_BOTTLE_SHAPE Shape {
       appearance PBRAppearance {
@@ -50,11 +27,8 @@ DEF MEDICINE_BOTTLE Solid {
         metalness 0
       }
       geometry Cylinder {
-        bottom TRUE
         height 0.35
         radius 0.12
-        side TRUE
-        top TRUE
         subdivision 24
       }
     }
@@ -65,9 +39,8 @@ DEF MEDICINE_BOTTLE Solid {
     density 1
   }
 }
-
 DEF FRONT_CRATE Solid {
-  translation 1.85 1.5 0.85
+  translation 1.85 1.5 0.2
   children [
     DEF FRONT_CRATE_SHAPE Shape {
       appearance PBRAppearance {
@@ -86,9 +59,8 @@ DEF FRONT_CRATE Solid {
     density 1
   }
 }
-
 DEF TEMP_ZONE Solid {
-  translation -2.0 -1.8 0.05
+  translation -2 -1.8 0.05
   children [
     DEF TEMP_ZONE_SHAPE Shape {
       appearance PBRAppearance {
@@ -97,21 +69,16 @@ DEF TEMP_ZONE Solid {
         metalness 0
       }
       geometry Cylinder {
-        bottom TRUE
         height 0.04
-        radius 0.5
-        side TRUE
-        top TRUE
-        subdivision 36
+        radius 0.2
       }
     }
   ]
   name "TEMP_ZONE"
   boundingObject USE TEMP_ZONE_SHAPE
 }
-
 DEF MEDICAL_TABLE Solid {
-  translation -2.3 2.0 0.35
+  translation -2.3 2 0.35
   children [
     DEF MEDICAL_TABLE_SHAPE Shape {
       appearance PBRAppearance {
@@ -120,7 +87,7 @@ DEF MEDICAL_TABLE Solid {
         metalness 0
       }
       geometry Box {
-        size 1.4 1.0 0.7
+        size 1.4 1 0.7
       }
     }
   ]
@@ -131,38 +98,14 @@ DEF MEDICAL_TABLE Solid {
     mass 5
   }
 }
-
-DEF FRONT_CRATE_ORIGIN Solid {
-  translation 1.85 1.5 0.85
-  children [
-    DEF FRONT_CRATE_ORIGIN_SHAPE Shape {
-      appearance PBRAppearance {
-        baseColor 1 1 0
-        transparency 0.65
-        roughness 1
-        metalness 0
-      }
-      geometry Cylinder {
-        bottom TRUE
-        height 0.02
-        radius 0.18
-        side TRUE
-        top TRUE
-        subdivision 24
-      }
-    }
-  ]
-  name "FRONT_CRATE_ORIGIN"
-}
-
 DEF BRIDGE Robot {
   name "BRIDGE"
   controller "<extern>"
   supervisor TRUE
 }
 DEF CAR Robot {
-  translation 0 0 0.05
-  rotation 0 0 -1 2.78858
+  translation 0.487862 1.43999 0.05
+  rotation 0 0 1 0.0912173
   children [
     DEF BODY Shape {
       appearance PBRAppearance {

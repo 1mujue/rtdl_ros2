@@ -29,6 +29,11 @@ struct ObjectEntry{
     bool pick_target{false};
     WbNodeRef node{0};
 };
+struct PoseSnapshot
+{
+    std::array<double, 3> translation;
+    std::array<double, 4> rotation;
+};
 
 namespace rtdl_demo_webots{
 class WorldBridgeDriver: public webots_ros2_driver::PluginInterface{
@@ -65,6 +70,7 @@ private:
         const std::shared_ptr<rtdl_demo_interfaces::srv::PlacePri::Request> req,
         std::shared_ptr<rtdl_demo_interfaces::srv::PlacePri::Response> res
     );
+    void saveInitialPoses();
 
     webots_ros2_driver::WebotsNode* node_{nullptr};
 
@@ -78,6 +84,9 @@ private:
     rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr reset_world_srv_;
     rclcpp::Service<rtdl_demo_interfaces::srv::PickPri>::SharedPtr pick_pri_srv_;
     rclcpp::Service<rtdl_demo_interfaces::srv::PlacePri>::SharedPtr place_pri_srv_;
+
+    std::unordered_map<std::string, PoseSnapshot> initial_robot_poses_;
+    std::unordered_map<std::string, PoseSnapshot> initial_object_poses_;
 
     const std::string kMainRobotName = "CAR";
 };

@@ -1,3 +1,8 @@
+robots:
+  - id: CAR
+    def: CAR
+    interaction_distance: 2
+
 objects:
   - id: BOX_TOP
     def: BOX_TOP

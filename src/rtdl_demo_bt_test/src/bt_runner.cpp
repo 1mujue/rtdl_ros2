@@ -15,7 +15,6 @@ struct Param{
     std::string value;
 };
 void handleParas(int argc, char** argv, std::vector<Param>& paras){
-    std::cout << "argc: " << argc << '\n';
     for(int i = 1; i < argc; i += 2){
         for(auto& it: paras){
             if(argv[i] == it.key){
@@ -112,7 +111,7 @@ static void run(int argc, char** argv){
     registerExecutionNodes(factory, ros_node);
     handleXMLS(factory);
 
-    auto tree = factory.createTree("pick_and_place_cup");
+    auto tree = factory.createTree("RemoveMiddleBoxToInspection");
     const auto status = tree.tickWhileRunning();
     if (status == BT::NodeStatus::SUCCESS) { RCLCPP_INFO(ros_node->get_logger(), "Behavior tree finished with SUCCESS.");}
     else if (status == BT::NodeStatus::FAILURE){ RCLCPP_ERROR(ros_node->get_logger(), "Behavior tree finished with FAILURE.");}
