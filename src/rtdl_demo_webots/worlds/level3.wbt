@@ -28,14 +28,14 @@ DEF BOX_BOTTOM Solid {
         metalness 0
       }
       geometry Box {
-        size 0.8 0.8 0.3
+        size 0.4 0.4 0.3
       }
     }
   ]
   name "BOX_BOTTOM"
   boundingObject USE BOX_BOTTOM_SHAPE
   physics Physics {
-    density 1
+    density 0.1
   }
 }
 
@@ -49,14 +49,14 @@ DEF BOX_MIDDLE Solid {
         metalness 0
       }
       geometry Box {
-        size 0.8 0.8 0.3
+        size 0.4 0.4 0.3
       }
     }
   ]
   name "BOX_MIDDLE"
   boundingObject USE BOX_MIDDLE_SHAPE
   physics Physics {
-    density 1
+    density 0.1
   }
 }
 
@@ -70,14 +70,14 @@ DEF BOX_TOP Solid {
         metalness 0
       }
       geometry Box {
-        size 0.8 0.8 0.3
+        size 0.4 0.4 0.3
       }
     }
   ]
   name "BOX_TOP"
   boundingObject USE BOX_TOP_SHAPE
   physics Physics {
-    density 1
+    density 0.1
   }
 }
 
@@ -91,7 +91,7 @@ DEF TEMP_TABLE Solid {
         metalness 0
       }
       geometry Box {
-        size 1.2 1.0 0.5
+        size 0.5 0.5 0.5
       }
     }
   ]
@@ -99,7 +99,7 @@ DEF TEMP_TABLE Solid {
   boundingObject USE TEMP_TABLE_SHAPE
   physics Physics {
     density -1
-    mass 5
+    mass 2
   }
 }
 
@@ -113,7 +113,7 @@ DEF INSPECTION_TABLE Solid {
         metalness 0
       }
       geometry Box {
-        size 1.4 1.0 0.7
+        size 0.5 0.5 0.7
       }
     }
   ]
@@ -121,7 +121,7 @@ DEF INSPECTION_TABLE Solid {
   boundingObject USE INSPECTION_TABLE_SHAPE
   physics Physics {
     density -1
-    mass 5
+    mass 2
   }
 }
 

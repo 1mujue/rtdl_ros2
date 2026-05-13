@@ -1,52 +1,64 @@
-<root main_tree_to_execute = "RemoveMiddleBoxToInspection" BTCPP_format = "4">
-  <BehaviorTree ID = "RemoveMiddleBoxToInspection">
+<root main_tree_to_execute = "RemoveMiddleBox" BTCPP_format = "4">
+  <BehaviorTree ID = "RemoveMiddleBox">
     <Sequence>
       <RetryUntilSuccessful num_attempts = "3">
-        <NavTo tolerance = "0.500000" y = "-1.000000" x = "2.000000" robot_name = "CAR" message = "{nav_stack_message}" success = "{nav_stack_success}"/>
+        <NavTo tolerance = "0.500000" y = "-1.000000" x = "2.000000" robot_name = "CAR" message = "{nav1_msg}" success = "{nav1_success}"/>
       </RetryUntilSuccessful>
-      <Precondition else = "FAILURE" if = "nav_stack_success == true">
+      <Precondition else = "FAILURE" if = "nav1_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Pick object_name = "BOX_TOP" robot_name = "CAR" message = "{pick1_msg}" success = "{pick1_success}"/>
+      <Precondition else = "FAILURE" if = "pick1_success == true">
         <AlwaysSuccess/>
       </Precondition>
       <RetryUntilSuccessful num_attempts = "3">
-        <Pick object_name = "BOX_TOP" robot_name = "CAR" message = "{pick_top_message}" success = "{pick_top_success}"/>
+        <NavTo tolerance = "0.500000" y = "-1.800000" x = "-2.200000" robot_name = "CAR" message = "{nav2_msg}" success = "{nav2_success}"/>
       </RetryUntilSuccessful>
-      <Precondition else = "FAILURE" if = "pick_top_success == true">
+      <Precondition else = "FAILURE" if = "nav2_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Place location_name = "TEMP_TABLE" object_name = "BOX_TOP" robot_name = "CAR" message = "{place1_msg}" success = "{place1_success}"/>
+      <Precondition else = "FAILURE" if = "place1_success == true">
         <AlwaysSuccess/>
       </Precondition>
       <RetryUntilSuccessful num_attempts = "3">
-        <NavTo tolerance = "0.500000" y = "-1.800000" x = "-2.200000" robot_name = "CAR" message = "{nav_temp_message}" success = "{nav_temp_success}"/>
+        <NavTo tolerance = "0.500000" y = "-1.000000" x = "2.000000" robot_name = "CAR" message = "{nav3_msg}" success = "{nav3_success}"/>
       </RetryUntilSuccessful>
-      <Precondition else = "FAILURE" if = "nav_temp_success == true">
+      <Precondition else = "FAILURE" if = "nav3_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Pick object_name = "BOX_MIDDLE" robot_name = "CAR" message = "{pick2_msg}" success = "{pick2_success}"/>
+      <Precondition else = "FAILURE" if = "pick2_success == true">
         <AlwaysSuccess/>
       </Precondition>
       <RetryUntilSuccessful num_attempts = "3">
-        <Place location_name = "TEMP_TABLE" object_name = "BOX_TOP" robot_name = "CAR" message = "{place_top_message}" success = "{place_top_success}"/>
+        <NavTo tolerance = "0.500000" y = "2.000000" x = "-2.200000" robot_name = "CAR" message = "{nav4_msg}" success = "{nav4_success}"/>
       </RetryUntilSuccessful>
-      <Precondition else = "FAILURE" if = "place_top_success == true">
+      <Precondition else = "FAILURE" if = "nav4_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Place location_name = "INSPECTION_TABLE" object_name = "BOX_MIDDLE" robot_name = "CAR" message = "{place2_msg}" success = "{place2_success}"/>
+      <Precondition else = "FAILURE" if = "place2_success == true">
         <AlwaysSuccess/>
       </Precondition>
       <RetryUntilSuccessful num_attempts = "3">
-        <NavTo tolerance = "0.500000" y = "-1.000000" x = "2.000000" robot_name = "CAR" message = "{nav_stack2_message}" success = "{nav_stack2_success}"/>
+        <NavTo tolerance = "0.500000" y = "-1.800000" x = "-2.200000" robot_name = "CAR" message = "{nav5_msg}" success = "{nav5_success}"/>
       </RetryUntilSuccessful>
-      <Precondition else = "FAILURE" if = "nav_stack2_success == true">
+      <Precondition else = "FAILURE" if = "nav5_success == true">
+        <AlwaysSuccess/>
+      </Precondition>
+      <Pick object_name = "BOX_TOP" robot_name = "CAR" message = "{pick3_msg}" success = "{pick3_success}"/>
+      <Precondition else = "FAILURE" if = "pick3_success == true">
         <AlwaysSuccess/>
       </Precondition>
       <RetryUntilSuccessful num_attempts = "3">
-        <Pick object_name = "BOX_MIDDLE" robot_name = "CAR" message = "{pick_middle_message}" success = "{pick_middle_success}"/>
+        <NavTo tolerance = "0.500000" y = "-1.000000" x = "2.000000" robot_name = "CAR" message = "{nav6_msg}" success = "{nav6_success}"/>
       </RetryUntilSuccessful>
-      <Precondition else = "FAILURE" if = "pick_middle_success == true">
+      <Precondition else = "FAILURE" if = "nav6_success == true">
         <AlwaysSuccess/>
       </Precondition>
-      <RetryUntilSuccessful num_attempts = "3">
-        <NavTo tolerance = "0.500000" y = "2.000000" x = "-2.200000" robot_name = "CAR" message = "{nav_inspect_message}" success = "{nav_inspect_success}"/>
-      </RetryUntilSuccessful>
-      <Precondition else = "FAILURE" if = "nav_inspect_success == true">
-        <AlwaysSuccess/>
-      </Precondition>
-      <RetryUntilSuccessful num_attempts = "3">
-        <Place location_name = "INSPECTION_TABLE" object_name = "BOX_MIDDLE" robot_name = "CAR" message = "{place_middle_message}" success = "{place_middle_success}"/>
-      </RetryUntilSuccessful>
-      <Precondition else = "FAILURE" if = "place_middle_success == true">
+      <Place location_name = "BOX_BOTTOM" object_name = "BOX_TOP" robot_name = "CAR" message = "{place3_msg}" success = "{place3_success}"/>
+      <Precondition else = "FAILURE" if = "place3_success == true">
         <AlwaysSuccess/>
       </Precondition>
     </Sequence>

@@ -111,7 +111,7 @@ static void run(int argc, char** argv){
     registerExecutionNodes(factory, ros_node);
     handleXMLS(factory);
 
-    auto tree = factory.createTree("RemoveMiddleBoxToInspection");
+    auto tree = factory.createTree("RemoveMiddleBox");
     const auto status = tree.tickWhileRunning();
     if (status == BT::NodeStatus::SUCCESS) { RCLCPP_INFO(ros_node->get_logger(), "Behavior tree finished with SUCCESS.");}
     else if (status == BT::NodeStatus::FAILURE){ RCLCPP_ERROR(ros_node->get_logger(), "Behavior tree finished with FAILURE.");}
